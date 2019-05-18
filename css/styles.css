@@ -1,0 +1,37 @@
+body {
+  background: url(../images/dogsbackground.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+  background-color: rgba(238, 238, 238, 0.81) !important;
+  background-blend-mode: color;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Arvo", serif;
+  font-size: 6.25rem;
+  letter-spacing: 5px;
+  position: relative;
+  bottom: 85px;
+  text-shadow: 2px 0 #f58b54;
+  color: #211717;
+}
+
+h2 {
+  font-family: "Pridi", serif;
+  font-size: 75px;
+  text-align: center;
+  position: relative;
+  bottom: 175px;
+  right: 250px;
+  transform: rotate(-20deg);
+  z-index: 1;
+  color: #a34a28;
+}
