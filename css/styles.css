@@ -20,7 +20,7 @@ h1 {
   letter-spacing: 5px;
   position: relative;
   bottom: 85px;
-  text-shadow: 2px 0 #f58b54;
+  text-shadow: 3px 0 #a34a28;
   color: #211717;
 }
 
@@ -34,4 +34,14 @@ h2 {
   transform: rotate(-20deg);
   z-index: 1;
   color: #a34a28;
+  font-weight: 900;
+}
+
+p {
+  font-family: "Ultra", serif;
+}
+
+#game {
+  text-align: center;
+  border: 2px solid #211717
 }
