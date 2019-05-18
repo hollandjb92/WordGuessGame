@@ -1,5 +1,5 @@
 body {
-  background: url(../images/dogsbackground.jpg) no-repeat center center fixed;
+  background: url(../images/dogsbackground.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,30 +18,46 @@ h1 {
   font-family: "Arvo", serif;
   font-size: 6.25rem;
   letter-spacing: 5px;
-  position: relative;
-  bottom: 85px;
   text-shadow: 3px 0 #a34a28;
   color: #211717;
 }
 
 h2 {
   font-family: "Pridi", serif;
-  font-size: 75px;
+  font-size: 4.6875rem;
   text-align: center;
   position: relative;
-  bottom: 175px;
+  bottom: 25px;
   right: 250px;
   transform: rotate(-20deg);
-  z-index: 1;
   color: #a34a28;
   font-weight: 900;
 }
 
 p {
   font-family: "Ultra", serif;
+  font-size: 1.25rem;
+}
+
+#title {
+  position: relative;
+  bottom: 15px;
 }
 
 #game {
+  margin-top: 3.125rem;
   text-align: center;
-  border: 2px solid #211717
+  border: 3px dotted #211717
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    right: 150px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  h2 {
+    right: 100px;
+  }
 }

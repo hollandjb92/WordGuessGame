@@ -5,29 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
-
   <link href="https://fonts.googleapis.com/css?family=Ultra|Pridi|Arvo&display=swap" rel="stylesheet">
 
-  <title>Word Guessing Game</title>
+  <title>Doggie Hangman</title>
 </head>
 
 <body>
 
-  <h1>HANGMAN</h1>
-  <h2>DOG EDITION</h2>
+
+  <div id="title">
+    <h1>HANGMAN</h1>
+    <h2>DOG EDITION</h2>
+  </div>
+
+
 
   <div class="container">
     <div id="game">
-      <p id="startGame">Guess Away!</p>
-      <p id="wins">Wins: </p>
-      <p id="currentWord">Current Word</p>
+      <p id="startGame">Guess the Dog Breed!</p>
+      <p id="wins"></p>
+      <p id="losses"></p>
+      <p id="currentWord">Current Word:</p>
       <p id="word"></p>
-      <p id="guessesRemaining">Number of Guesses Remaining</p>
+      <p id="guessesRemaining">Number of Guesses Remaining:</p>
       <p id="guessesAmount"></p>
-      <p id="lettersGuessed"></p>
+      <p id="lettersGuessed">Letters Already Guessed:</p>
       <p id="letters"></p>
     </div>
   </div>
