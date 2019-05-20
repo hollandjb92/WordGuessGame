@@ -1,7 +1,26 @@
 //jshint esversion:6
 
 //answer options array
-let dogNames = ["germanshepard", "bulldog", "poodle", "beagle", "doberman", "greyhound", "chihuahua", "husky", "dalmatian", "greatdane", "boxer", "dachshund", "goldenretriever", "jackrussellterrier", "labradorretriever", "pug", "shihtzu", "bordercollie"];
+let dogNames = [
+  "germanshepard",
+  "bulldog",
+  "poodle",
+  "beagle",
+  "doberman",
+  "greyhound",
+  "chihuahua",
+  "husky",
+  "dalmatian",
+  "greatdane",
+  "boxer",
+  "dachshund",
+  "goldenretriever",
+  "jackrussellterrier",
+  "labradorretriever",
+  "pug",
+  "shihtzu",
+  "bordercollie"
+];
 //empty array for incorrect guessses
 let wrongLettersGuessed = [];
 //empty string to hold the answer and looping
@@ -16,7 +35,6 @@ let numberOfBlanks = 0;
 let numberOfGuesses = 10;
 let wins = 0;
 let losses = 0;
-
 
 //FUNCTIONS
 
@@ -43,31 +61,14 @@ function initializeRound() {
 }
 
 function checkGuesses(guess) {
-
-  //this doesnt work LOL
-  // for (i = 0; i < numberOfBlanks; i++) {
-  //   if (pickedWord[i] === guess) {
-  //     for (a = 0; a < numberOfBlanks; a++) {
-  //       if (pickedWord[a] === guess) {
-  //         answersArray[a] = guess;
-  //       }
-  //     }
-  //   } else {
-  //     wrongLettersGuessed.push(guess);
-  //     numberOfGuesses--;
-  //   }
-  // }
-
   //trying something else
   let letterIsPresent = null;
-
   //loops through to see if guess is present
   for (i = 0; i < numberOfBlanks; i++) {
     if (pickedWord[i] === guess) {
       letterIsPresent = true;
     }
   }
-
   //if guess is present, loops through and replaces _ with the letter anytime it appears. If wrong and not already guessed, lose a guess and add to wrong letters array
   if (letterIsPresent) {
     for (a = 0; a < numberOfBlanks; a++) {
@@ -82,8 +83,8 @@ function checkGuesses(guess) {
 }
 
 //play sound upon winning or losing a round
-function playSound (sound) {
-  var audio =  new Audio ("sounds/" + sound + ".mp3");
+function playSound(sound) {
+  var audio = new Audio("sounds/" + sound + ".mp3");
   audio.play();
 }
 
@@ -100,8 +101,9 @@ function afterGuess() {
     wins++;
     document.getElementById("wins").innerHTML = "Wins: " + wins;
     document.getElementById("startGame").innerHTML = "You Got it!";
-    document.querySelector("img#winningDog").setAttribute("src", "images/" + pickedWord + ".png");
-
+    document
+      .querySelector("img#winningDog")
+      .setAttribute("src", "images/" + pickedWord + ".png");
     initializeRound();
   } else if (numberOfGuesses == 0) {
     playSound("wrong");
@@ -112,15 +114,13 @@ function afterGuess() {
   }
 }
 
-
-
 //RUNNING THE GAME (Note to self: if there is too much code in this section - add more functions)
 initializeRound();
 
 //check for player key clicks that are letters and then runs appropriate functions
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function(event) {
   let key = event.key.toLowerCase();
-  let isLetter = (key >= "a" && key <= "z");
+  let isLetter = key >= "a" && key <= "z";
   if (key.length !== 1) {
     console.log(key);
   } else if (isLetter) {
