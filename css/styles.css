@@ -8,17 +8,13 @@ body {
   background-blend-mode: color;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
 
 h1 {
   text-align: center;
   font-family: "Arvo", serif;
   font-size: 6.25rem;
   letter-spacing: 5px;
-  text-shadow: 3px 0 #a34a28;
+  text-shadow: 2px 0 #a34a28;
   color: #211717;
 }
 
@@ -32,6 +28,11 @@ h2 {
   transform: rotate(-20deg);
   color: #a34a28;
   font-weight: 900;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 p {
@@ -50,6 +51,11 @@ p {
   border: 3px dotted #211717
 }
 
+img #winningDog {
+  height: 150px;
+  width: 150px;
+}
+
 @media only screen and (max-width: 768px) {
   h2 {
     right: 150px;
@@ -58,6 +64,6 @@ p {
 
 @media only screen and (max-width: 640px) {
   h2 {
-    right: 100px;
+    right: 90px;
   }
 }
