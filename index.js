@@ -118,7 +118,7 @@ function afterGuess() {
 initializeRound();
 
 //check for player key clicks that are letters and then runs appropriate functions
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
   let key = event.key.toLowerCase();
   let isLetter = key >= "a" && key <= "z";
   if (key.length !== 1) {

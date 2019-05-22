@@ -8,14 +8,13 @@ body {
   background-blend-mode: color;
 }
 
-
-h1 {
-  text-align: center;
+#game-head {
   font-family: "Arvo", serif;
   font-size: 6.25rem;
   letter-spacing: 5px;
   text-shadow: 2px 0 #a34a28;
   color: #211717;
+  text-decoration: none;
 }
 
 h2 {
@@ -43,6 +42,7 @@ p {
 #title {
   position: relative;
   bottom: 15px;
+  text-align: center;
 }
 
 #game {
